@@ -27,7 +27,7 @@ def build_survey(input_csv: str, output_qsf: str):
     team_mentors = df.groupby("group_name")["mentor_name"].first().to_dict()
 
     # Save for reference
-    with open("teams_mentors.json", "w") as f:
+    with open("data/teams_mentors.json", "w") as f:
         json.dump({"teams": team_members, "mentors": team_mentors}, f, indent=4)
 
     # --- Build team / choice mappings ---

@@ -25,7 +25,7 @@ def build_client_survey(input_csv: str, output_qsf: str):
     team_members = df.groupby("group_name")["name"].apply(list).to_dict()
 
     # Save for reference
-    with open("client_teams.json", "w") as f:
+    with open("data/client_teams.json", "w") as f:
         json.dump({"teams": team_members}, f, indent=4)
 
     # --- Build dropdown choices ---
@@ -99,14 +99,14 @@ def build_client_survey(input_csv: str, output_qsf: str):
         "DataExportTag": "ProjectTeam",
         "Required": True,
     }
-    Question_Element, Question_ID = Template.get_question_element(f"QID{q_counter}")
+    Question_Element, Question_ID_Team = Template.get_question_element(f"QID{q_counter}")
     Intro_Block["BlockElements"].append(Question_Element)
     question_blocks.append(
         Template.get_question(
             "MCQ",
             "Please select the project team you are evaluating today.",
             team_meta,
-            Question_ID,
+            Question_ID_Team,
         )
     )
     q_counter += 1
@@ -259,7 +259,7 @@ def build_client_survey(input_csv: str, output_qsf: str):
                 Question_ID,
             )
         )
-        print(Question_ID)
+        # print(Question_ID)
         q_counter += 1
 
         curr_blocks.append(Feedback_Block)
@@ -294,7 +294,7 @@ def build_client_survey(input_csv: str, output_qsf: str):
         order = team_to_order[team]
         blocks = team_blocks[team]
 
-        BR, BR_ID = Template.get_branch(order, blocks[0], team)
+        BR, BR_ID = Template.get_branch(order, blocks[0], team, Question_ID_Team)
 
         for block in blocks[1:]:
             BR["Flow"].append(
