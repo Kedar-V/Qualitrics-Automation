@@ -1,0 +1,24 @@
+{
+    "teams": {
+        "Team Alpha": [
+            "Alice Johnson",
+            "Robert Singh",
+            "Mei Chang"
+        ],
+        "Team Beta": [
+            "Daniel Kim",
+            "Sara Lopez"
+        ],
+        "Team Gamma": [
+            "Michael Brown",
+            "Leah Thompson",
+            "Chris Wilson",
+            "Nina Park"
+        ]
+    },
+    "mentors": {
+        "Team Alpha": "Dr. Emily Carter",
+        "Team Beta": "Prof. Laura Bennett",
+        "Team Gamma": "Dr. Arjun Patel"
+    }
+}

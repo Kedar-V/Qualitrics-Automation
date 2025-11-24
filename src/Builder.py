@@ -96,14 +96,14 @@ class _Builder:
             "Payload": None
         }
         self.SO = {
-            "SurveyID": survey_id,
+            "SurveyID": "SV_ehV7YlbNWr2IMuO",
             "Element": "SO",
             "PrimaryAttribute": "Survey Options",
             "SecondaryAttribute": None,
             "TertiaryAttribute": None,
             "Payload": {
                 "BackButton": "true",
-                "SaveAndContinue": "true",
+                "SaveAndContinue": "false",
                 "SurveyProtection": "PublicSurvey",
                 "BallotBoxStuffingPrevention": "false",
                 "NoIndex": "Yes",
@@ -113,17 +113,54 @@ class _Builder:
                 "Header": "",
                 "Footer": "",
                 "ProgressBarDisplay": "None",
-                "PartialData": "+1 week",
-                "ValidationMessage": "",
+                "PartialData": "No",
+                "ValidationMessage": None,
                 "PreviousButton": "",
                 "NextButton": "",
                 "SurveyTitle": "Qualtrics Survey | Qualtrics Experience Management",
                 "SkinLibrary": "duke",
                 "SkinType": "templated",
-                "Skin": {"brandingId": "1852927161", "templateId": "*base", "overrides": None},
+                "Skin": {
+                    "brandingId": "1852927161",
+                    "templateId": "*base",
+                    "overrides": None
+                },
                 "NewScoring": 1,
                 "SurveyMetaDescription": "The most powerful, simple and trusted way to gather experience data. Start your journey to experience management and try a free account today.",
-                "SurveyName": survey_name
+                "EOSMessage": None,
+                "ShowExportTags": "false",
+                "CollectGeoLocation": "false",
+                "PasswordProtection": "No",
+                "AnonymizeResponse": "No",
+                "RefererCheck": "No",
+                "BallotBoxStuffingPreventionBehavior": None,
+                "BallotBoxStuffingPreventionMessage": None,
+                "BallotBoxStuffingPreventionMessageLibrary": None,
+                "BallotBoxStuffingPreventionURL": None,
+                "RecaptchaV3": "false",
+                "ConfirmStart": False,
+                "AutoConfirmStart": False,
+                "RelevantID": "false",
+                "RelevantIDLockoutPeriod": "+30 days",
+                "UseCustomSurveyLinkCompletedMessage": None,
+                "SurveyLinkCompletedMessage": None,
+                "SurveyLinkCompletedMessageLibrary": None,
+                "ResponseSummary": "No",
+                "EOSMessageLibrary": None,
+                "EOSRedirectURL": None,
+                "EmailThankYou": "false",
+                "ThankYouEmailMessageLibrary": None,
+                "ThankYouEmailMessage": None,
+                "ValidateMessage": "false",
+                "ValidationMessageLibrary": None,
+                "InactiveSurvey": "DefaultMessage",
+                "PartialDeletion": "+1 hour",
+                "PartialDataCloseAfter": "SurveyStart",
+                "InactiveMessageLibrary": None,
+                "InactiveMessage": None,
+                "AvailableLanguages": {
+                    "EN": []
+                }
             }
         }
         self.STAT = {
