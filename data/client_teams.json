@@ -1,0 +1,19 @@
+{
+    "teams": {
+        "Team Alpha": [
+            "Alice Johnson",
+            "Robert Singh",
+            "Mei Chang"
+        ],
+        "Team Beta": [
+            "Daniel Kim",
+            "Sara Lopez"
+        ],
+        "Team Gamma": [
+            "Michael Brown",
+            "Leah Thompson",
+            "Chris Wilson",
+            "Nina Park"
+        ]
+    }
+}

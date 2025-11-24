@@ -26,8 +26,9 @@ class TEMPLATES:
         self.EMAIL_VALIDATION = self._b.EMAIL_VALIDATION
         self.QUESTIONS = {"SQ": self._b.Q_TEMPLATES}
 
-    def get_branch(self, member, block, team):
-        return self._b.branch(member, block, team)
+    def get_branch(self, member, block, team, Question_ID_Team):
+        print(Question_ID_Team)
+        return self._b.branch(member, block, team, Question_ID_Team)
 
     def get_standard_block(self, desc, TYPE='Standard'):
         return self._b.block(desc, TYPE)

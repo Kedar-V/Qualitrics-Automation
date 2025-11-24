@@ -102,7 +102,7 @@ class _Builder:
             "SecondaryAttribute": None,
             "TertiaryAttribute": None,
             "Payload": {
-                "BackButton": "false",
+                "BackButton": "true",
                 "SaveAndContinue": "true",
                 "SurveyProtection": "PublicSurvey",
                 "BallotBoxStuffingPrevention": "false",
@@ -139,12 +139,12 @@ class _Builder:
             "0": {
                 "0": {
                     "LogicType": "Question",
-                    "QuestionID": "QID4",
+                    "QuestionID": "PH",
                     "QuestionIsInLoop": "no",
-                    "ChoiceLocator": "q:\/\/QID4\/SelectableChoice\/Placeholder",
+                    "ChoiceLocator": "q:\/\/PH\/SelectableChoice\/Placeholder",
                     "Operator": "Selected",
-                    "QuestionIDFromLocator": "QID4",
-                    "LeftOperand": "q:\/\/QID4\/SelectableChoice\/Placeholder",
+                    "QuestionIDFromLocator": "PH",
+                    "LeftOperand": "q:\/\/PH\/SelectableChoice\/Placeholder",
                     "Type": "Expression",
                     "Description": "<span class=\"ConjDesc\">If<\/span> <span class=\"QuestionDesc\">Select your Project Team<\/span> <span class=\"LeftOpDesc\">Placeholder<\/span> <span class=\"OpDesc\">Is Selected<\/span> "
                 },
@@ -237,7 +237,7 @@ class _Builder:
                     "QuestionDescription": "Description",
                     "Choices": {"1": {"Display": "Rate"}},
                     "ChoiceOrder": [1],
-                    "Validation": {"Settings": {"ForceResponse": "ON", "ForceResponseType": "ON", "Type": "None"}},
+                    "Validation": {},
                     "GradingData": [],
                     "Language": [],
                     "Labels": [],
@@ -262,7 +262,7 @@ class _Builder:
                     "Configuration": {"QuestionDescriptionOption": "UseText"},
                     "QuestionDescription": "",
                     "ChoiceOrder": [],
-                    "Validation": {"Settings": {"ForceResponse": "ON", "ForceResponseType": "ON", "Type": "None"}},
+                    "Validation": {"Settings": {}},
                     "GradingData": [],
                     "Language": [],
                     "NextChoiceId": 4,
@@ -285,7 +285,7 @@ class _Builder:
                     "DataVisibility": {"Private": False, "Hidden": False},
                     "Configuration": {"QuestionDescriptionOption": "UseText", "InputWidth": 680, "InputHeight": 29},
                     "QuestionDescription": "",
-                    "Validation": {"Settings": {"ForceResponse": "ON", "ForceResponseType": "ON", "Type": "None"}},
+                    "Validation": {"Settings": {}},
                     "GradingData": [],
                     "Language": [],
                     "SearchSource": {"AllowFreeResponse": "false"},
@@ -295,12 +295,19 @@ class _Builder:
         }
 
     # helper ops
-    def branch(self, member, block, team):
+    def branch(self, member, block, team, Question_ID_Team):
         br = copy.deepcopy(self.FLOW_ELEMENTS['Branch'])
         logic = copy.deepcopy(self.BRANCH_LOGIC)
         logic['0']['0']['ChoiceLocator'] = logic['0']['0']['ChoiceLocator'].replace('Placeholder', member)
         logic['0']['0']['LeftOperand'] = logic['0']['0']['LeftOperand'].replace('Placeholder', member)
         logic['0']['0']['Description'] = logic['0']['0']['Description'].replace('Placeholder', team)
+
+        logic['0']['0']['QuestionID'] = Question_ID_Team
+        logic['0']['0']['ChoiceLocator'] = logic['0']['0']['ChoiceLocator'].replace('PH', Question_ID_Team)
+        logic['0']['0']['QuestionIDFromLocator'] = Question_ID_Team
+        logic['0']['0']['LeftOperand'] = logic['0']['0']['LeftOperand'].replace('PH', Question_ID_Team)
+
+        Question_ID_Team
         br['BranchLogic'] = logic
         br['FlowID'] = self.flow.next()
         std = copy.deepcopy(self.FLOW_ELEMENTS['Standard'])
@@ -351,4 +358,33 @@ class _Builder:
                 p['ChoiceOrder'] = metadata['choiceOrder']
             if 'DataExportTag' in metadata:
                 p['DataExportTag'] = metadata['DataExportTag']
+            if 'Required' in metadata and metadata['Required']:
+                p['Validation'] = {
+                    "Settings": {
+                        "ForceResponse": "ON", 
+                        "ForceResponseType": "ON", 
+                        "Type": "None"
+                        }
+                    }
+                
+            if 'Numeric' in metadata and metadata['Numeric']:
+                p['Selector'] = 'SL'
+                p['Validation'] = {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "ContentType",
+                        "MinChars": "1",
+                        "TotalChars": "1",
+                        "ContentType": "ValidNumber",
+                        "ValidDateType": "DateWithFormat",
+                        "ValidPhoneType": "ValidUSPhone",
+                        "ValidZipType": "ValidUSZip",
+                        "ValidNumber": {
+                            "Min": "1",
+                            "Max": "10000",
+                            "NumDecimals": ""
+                        }
+                    }
+                }
         return q

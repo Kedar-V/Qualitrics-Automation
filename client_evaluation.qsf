@@ -1,0 +1,2325 @@
+{
+    "SurveyEntry": {
+        "SurveyID": "SV_d6YW3IPnXRICDIi",
+        "SurveyName": "Mentor Evaluation",
+        "SurveyDescription": null,
+        "SurveyOwnerID": "UR_6XPnXwY9ovrE2uG",
+        "SurveyBrandID": "duke",
+        "DivisionID": null,
+        "SurveyLanguage": "EN",
+        "SurveyActiveResponseSet": "RS_cvbqrPWfwXcKHL8",
+        "SurveyStatus": "Inactive",
+        "SurveyStartDate": "0000-00-00 00:00:00",
+        "SurveyExpirationDate": "0000-00-00 00:00:00",
+        "SurveyCreationDate": "2025-10-22 17:00:52",
+        "CreatorID": "UR_6XPnXwY9ovrE2uG",
+        "LastModified": "2025-10-23 18:23:16",
+        "LastAccessed": "0000-00-00 00:00:00",
+        "LastActivated": "0000-00-00 00:00:00",
+        "Deleted": null
+    },
+    "SurveyElements": [
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "BL",
+            "PrimaryAttribute": "Survey Blocks",
+            "SecondaryAttribute": null,
+            "TertiaryAttribute": null,
+            "Payload": [
+                {
+                    "Type": "Default",
+                    "Description": "Intro and Project Selection",
+                    "ID": "BL_YMRvQkr1",
+                    "BlockElements": [
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID1"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID2"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID3"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID4"
+                        }
+                    ]
+                },
+                {
+                    "Type": "Standard",
+                    "Description": "Team Alpha - Overall Performance",
+                    "ID": "BL_bhBe9ZxZ",
+                    "BlockElements": [
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID5"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID6"
+                        }
+                    ]
+                },
+                {
+                    "Type": "Standard",
+                    "Description": "Team Alpha - Technical & Collaboration",
+                    "ID": "BL_sNFXtoXT",
+                    "BlockElements": [
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID7"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID8"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID9"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID10"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID11"
+                        }
+                    ]
+                },
+                {
+                    "Type": "Standard",
+                    "Description": "Team Alpha - Member Ratings",
+                    "ID": "BL_wEO40jfc",
+                    "BlockElements": [
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID12"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID13"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID14"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID15"
+                        }
+                    ]
+                },
+                {
+                    "Type": "Standard",
+                    "Description": "Team Alpha - Additional Feedback",
+                    "ID": "BL_w3ysoBuS",
+                    "BlockElements": [
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID16"
+                        }
+                    ]
+                },
+                {
+                    "Type": "Standard",
+                    "Description": "Team Beta - Overall Performance",
+                    "ID": "BL_CaxXnkVK",
+                    "BlockElements": [
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID17"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID18"
+                        }
+                    ]
+                },
+                {
+                    "Type": "Standard",
+                    "Description": "Team Beta - Technical & Collaboration",
+                    "ID": "BL_YDnhjkH9",
+                    "BlockElements": [
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID19"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID20"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID21"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID22"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID23"
+                        }
+                    ]
+                },
+                {
+                    "Type": "Standard",
+                    "Description": "Team Beta - Member Ratings",
+                    "ID": "BL_aJcpkwqd",
+                    "BlockElements": [
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID24"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID25"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID26"
+                        }
+                    ]
+                },
+                {
+                    "Type": "Standard",
+                    "Description": "Team Beta - Additional Feedback",
+                    "ID": "BL_33Prc6dz",
+                    "BlockElements": [
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID27"
+                        }
+                    ]
+                },
+                {
+                    "Type": "Standard",
+                    "Description": "Team Gamma - Overall Performance",
+                    "ID": "BL_IPxxpY9p",
+                    "BlockElements": [
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID28"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID29"
+                        }
+                    ]
+                },
+                {
+                    "Type": "Standard",
+                    "Description": "Team Gamma - Technical & Collaboration",
+                    "ID": "BL_p9RjOYfe",
+                    "BlockElements": [
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID30"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID31"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID32"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID33"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID34"
+                        }
+                    ]
+                },
+                {
+                    "Type": "Standard",
+                    "Description": "Team Gamma - Member Ratings",
+                    "ID": "BL_rutrKriK",
+                    "BlockElements": [
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID35"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID36"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID37"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID38"
+                        },
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID39"
+                        }
+                    ]
+                },
+                {
+                    "Type": "Standard",
+                    "Description": "Team Gamma - Additional Feedback",
+                    "ID": "BL_BOKZT0Lc",
+                    "BlockElements": [
+                        {
+                            "Type": "Question",
+                            "QuestionID": "QID40"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "FL",
+            "PrimaryAttribute": "Survey Flow",
+            "SecondaryAttribute": null,
+            "TertiaryAttribute": null,
+            "Payload": {
+                "Type": "Root",
+                "FlowID": "FL_1",
+                "Flow": [
+                    {
+                        "Type": "Block",
+                        "ID": "BL_YMRvQkr1",
+                        "FlowID": "FL_2"
+                    },
+                    {
+                        "Type": "Branch",
+                        "FlowID": "FL_3",
+                        "Description": "New Branch",
+                        "BranchLogic": {
+                            "0": {
+                                "0": {
+                                    "LogicType": "Question",
+                                    "QuestionID": "QID4",
+                                    "QuestionIsInLoop": "no",
+                                    "ChoiceLocator": "q:\/\/QID4\/SelectableChoice\/1",
+                                    "Operator": "Selected",
+                                    "QuestionIDFromLocator": "QID4",
+                                    "LeftOperand": "q:\/\/QID4\/SelectableChoice\/1",
+                                    "Type": "Expression",
+                                    "Description": "<span class=\"ConjDesc\">If<\/span> <span class=\"QuestionDesc\">Select your Project Team<\/span> <span class=\"LeftOpDesc\">Team Alpha<\/span> <span class=\"OpDesc\">Is Selected<\/span> "
+                                },
+                                "Type": "If"
+                            },
+                            "Type": "BooleanExpression"
+                        },
+                        "Flow": [
+                            {
+                                "Type": "Standard",
+                                "ID": "BL_bhBe9ZxZ",
+                                "FlowID": "FL_4"
+                            },
+                            {
+                                "Type": "Block",
+                                "ID": "BL_sNFXtoXT",
+                                "FlowID": "FL_5"
+                            },
+                            {
+                                "Type": "Block",
+                                "ID": "BL_wEO40jfc",
+                                "FlowID": "FL_6"
+                            },
+                            {
+                                "Type": "Block",
+                                "ID": "BL_w3ysoBuS",
+                                "FlowID": "FL_7"
+                            }
+                        ]
+                    },
+                    {
+                        "Type": "Branch",
+                        "FlowID": "FL_8",
+                        "Description": "New Branch",
+                        "BranchLogic": {
+                            "0": {
+                                "0": {
+                                    "LogicType": "Question",
+                                    "QuestionID": "QID4",
+                                    "QuestionIsInLoop": "no",
+                                    "ChoiceLocator": "q:\/\/QID4\/SelectableChoice\/2",
+                                    "Operator": "Selected",
+                                    "QuestionIDFromLocator": "QID4",
+                                    "LeftOperand": "q:\/\/QID4\/SelectableChoice\/2",
+                                    "Type": "Expression",
+                                    "Description": "<span class=\"ConjDesc\">If<\/span> <span class=\"QuestionDesc\">Select your Project Team<\/span> <span class=\"LeftOpDesc\">Team Beta<\/span> <span class=\"OpDesc\">Is Selected<\/span> "
+                                },
+                                "Type": "If"
+                            },
+                            "Type": "BooleanExpression"
+                        },
+                        "Flow": [
+                            {
+                                "Type": "Standard",
+                                "ID": "BL_CaxXnkVK",
+                                "FlowID": "FL_9"
+                            },
+                            {
+                                "Type": "Block",
+                                "ID": "BL_YDnhjkH9",
+                                "FlowID": "FL_10"
+                            },
+                            {
+                                "Type": "Block",
+                                "ID": "BL_aJcpkwqd",
+                                "FlowID": "FL_11"
+                            },
+                            {
+                                "Type": "Block",
+                                "ID": "BL_33Prc6dz",
+                                "FlowID": "FL_12"
+                            }
+                        ]
+                    },
+                    {
+                        "Type": "Branch",
+                        "FlowID": "FL_13",
+                        "Description": "New Branch",
+                        "BranchLogic": {
+                            "0": {
+                                "0": {
+                                    "LogicType": "Question",
+                                    "QuestionID": "QID4",
+                                    "QuestionIsInLoop": "no",
+                                    "ChoiceLocator": "q:\/\/QID4\/SelectableChoice\/3",
+                                    "Operator": "Selected",
+                                    "QuestionIDFromLocator": "QID4",
+                                    "LeftOperand": "q:\/\/QID4\/SelectableChoice\/3",
+                                    "Type": "Expression",
+                                    "Description": "<span class=\"ConjDesc\">If<\/span> <span class=\"QuestionDesc\">Select your Project Team<\/span> <span class=\"LeftOpDesc\">Team Gamma<\/span> <span class=\"OpDesc\">Is Selected<\/span> "
+                                },
+                                "Type": "If"
+                            },
+                            "Type": "BooleanExpression"
+                        },
+                        "Flow": [
+                            {
+                                "Type": "Standard",
+                                "ID": "BL_IPxxpY9p",
+                                "FlowID": "FL_14"
+                            },
+                            {
+                                "Type": "Block",
+                                "ID": "BL_p9RjOYfe",
+                                "FlowID": "FL_15"
+                            },
+                            {
+                                "Type": "Block",
+                                "ID": "BL_rutrKriK",
+                                "FlowID": "FL_16"
+                            },
+                            {
+                                "Type": "Block",
+                                "ID": "BL_BOKZT0Lc",
+                                "FlowID": "FL_17"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "PROJ",
+            "PrimaryAttribute": "CORE",
+            "SecondaryAttribute": null,
+            "TertiaryAttribute": "1.1.0",
+            "Payload": {
+                "ProjectCategory": "CORE",
+                "SchemaVersion": "1.1.0"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "QC",
+            "PrimaryAttribute": "Survey Question Count",
+            "SecondaryAttribute": "26",
+            "TertiaryAttribute": null,
+            "Payload": null
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "RS",
+            "PrimaryAttribute": "RS_cvbqrPWfwXcKHL8",
+            "SecondaryAttribute": "Default Response Set",
+            "TertiaryAttribute": null,
+            "Payload": null
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SCO",
+            "PrimaryAttribute": "Scoring",
+            "SecondaryAttribute": null,
+            "TertiaryAttribute": null,
+            "Payload": {
+                "ScoringCategories": [],
+                "ScoringCategoryGroups": [],
+                "ScoringSummaryCategory": null,
+                "ScoringSummaryAfterQuestions": 0,
+                "ScoringSummaryAfterSurvey": 0,
+                "DefaultScoringCategory": null,
+                "AutoScoringCategory": null
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SO",
+            "PrimaryAttribute": "Survey Options",
+            "SecondaryAttribute": null,
+            "TertiaryAttribute": null,
+            "Payload": {
+                "BackButton": "true",
+                "SaveAndContinue": "true",
+                "SurveyProtection": "PublicSurvey",
+                "BallotBoxStuffingPrevention": "false",
+                "NoIndex": "Yes",
+                "SecureResponseFiles": "true",
+                "SurveyExpiration": "None",
+                "SurveyTermination": "DefaultMessage",
+                "Header": "",
+                "Footer": "",
+                "ProgressBarDisplay": "None",
+                "PartialData": "+1 week",
+                "ValidationMessage": "",
+                "PreviousButton": "",
+                "NextButton": "",
+                "SurveyTitle": "Qualtrics Survey | Qualtrics Experience Management",
+                "SkinLibrary": "duke",
+                "SkinType": "templated",
+                "Skin": {
+                    "brandingId": "1852927161",
+                    "templateId": "*base",
+                    "overrides": null
+                },
+                "NewScoring": 1,
+                "SurveyMetaDescription": "The most powerful, simple and trusted way to gather experience data. Start your journey to experience management and try a free account today.",
+                "SurveyName": "Mentor Evaluation"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID1",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Thank you for collaborating with our students! We are thrilled to see their growth and achievements this semester. This survey asks for your feedback on the students, which will be incorporated into their Capstone course grade. If you supervised more than one project, please complete a separate form for each team.",
+                "DefaultChoices": false,
+                "DataExportTag": "Q1",
+                "QuestionType": "DB",
+                "Selector": "TB",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText"
+                },
+                "QuestionDescription": "Thank you for collaborating with our students! We are thrilled to see their growth and achievements this semester. This survey asks for your feedback on the students, which will be incorporated into their Capstone course grade. If you supervised more than one project, please complete a separate form for each team.",
+                "ChoiceOrder": [],
+                "Validation": {
+                    "Settings": {}
+                },
+                "GradingData": [],
+                "Language": [],
+                "NextChoiceId": 4,
+                "NextAnswerId": 1,
+                "QuestionID": "QID1"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID2",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Please state your organization.",
+                "DefaultChoices": false,
+                "DataExportTag": "Organization",
+                "QuestionType": "TE",
+                "Selector": "ML",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "InputWidth": 680,
+                    "InputHeight": 29
+                },
+                "QuestionDescription": "Please state your organization.",
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "SearchSource": {
+                    "AllowFreeResponse": "false"
+                },
+                "QuestionID": "QID2"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID3",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Please state your name.",
+                "DefaultChoices": false,
+                "DataExportTag": "ClientName",
+                "QuestionType": "TE",
+                "Selector": "ML",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "InputWidth": 680,
+                    "InputHeight": 29
+                },
+                "QuestionDescription": "Please state your name.",
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "SearchSource": {
+                    "AllowFreeResponse": "false"
+                },
+                "QuestionID": "QID3"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID4",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Please select the project team you are evaluating today.",
+                "DataExportTag": "ProjectTeam",
+                "QuestionType": "MC",
+                "Selector": "SAVR",
+                "SubSelector": "TX",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText"
+                },
+                "QuestionDescription": "Please select the project team you are evaluating today.",
+                "Choices": {
+                    "1": {
+                        "Display": "Team Alpha"
+                    },
+                    "2": {
+                        "Display": "Team Beta"
+                    },
+                    "3": {
+                        "Display": "Team Gamma"
+                    }
+                },
+                "ChoiceOrder": [
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "Language": [],
+                "QuestionID": "QID4",
+                "QuestionJS": ""
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID5",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Team overall performance",
+                "DefaultChoices": false,
+                "DataExportTag": "Q5",
+                "QuestionType": "DB",
+                "Selector": "TB",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText"
+                },
+                "QuestionDescription": "Team overall performance",
+                "ChoiceOrder": [],
+                "Validation": {
+                    "Settings": {}
+                },
+                "GradingData": [],
+                "Language": [],
+                "NextChoiceId": 4,
+                "NextAnswerId": 1,
+                "QuestionID": "QID5"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID6",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Please rate the team’s overall productivity and your satisfaction with their performance on a scale of 1 to 10 (10 = very satisfied; scores of 7 or below indicate some level of concern).",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "Please rate the team’s overall productivity and your satisfaction with their performance on a scale of 1 to 10 (10 = very satisfied; scores of 7 or below indicate some level of concern).",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Team Alpha_OverallSatisfaction",
+                "QuestionID": "QID6"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID7",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Team technical readiness and collaboration experience",
+                "DefaultChoices": false,
+                "DataExportTag": "Q7",
+                "QuestionType": "DB",
+                "Selector": "TB",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText"
+                },
+                "QuestionDescription": "Team technical readiness and collaboration experience",
+                "ChoiceOrder": [],
+                "Validation": {
+                    "Settings": {}
+                },
+                "GradingData": [],
+                "Language": [],
+                "NextChoiceId": 4,
+                "NextAnswerId": 1,
+                "QuestionID": "QID7"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID8",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Is the team technically well-equipped to handle the project? Do they possess the necessary skills and knowledge to successfully complete their tasks?",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "Is the team technically well-equipped to handle the project? Do they possess the necessary skills and knowledge to successfully complete their tasks?",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Team Alpha_TechnicalEquipped",
+                "QuestionID": "QID8"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID9",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "To what extent did the students independently propose solutions (score = 10) versus relying on your guidance to determine detailed next steps (score = 0)?",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "To what extent did the students independently propose solutions (score = 10) versus relying on your guidance to determine detailed next steps (score = 0)?",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Team Alpha_Independence",
+                "QuestionID": "QID9"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID10",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "How effectively did the students use the meetings with you? How well prepared were they, and did they make efficient use of your time and expertise?",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "How effectively did the students use the meetings with you? How well prepared were they, and did they make efficient use of your time and expertise?",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Team Alpha_MeetingUse",
+                "QuestionID": "QID10"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID11",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Are you looking forward to the spring semester? Would you be interested in collaborating on the MIDS Capstone again in the future?",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "Are you looking forward to the spring semester? Would you be interested in collaborating on the MIDS Capstone again in the future?",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Team Alpha_FutureCollab",
+                "QuestionID": "QID11"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID12",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Individual student evaluations",
+                "DefaultChoices": false,
+                "DataExportTag": "Q12",
+                "QuestionType": "DB",
+                "Selector": "TB",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText"
+                },
+                "QuestionDescription": "Individual student evaluations",
+                "ChoiceOrder": [],
+                "Validation": {
+                    "Settings": {}
+                },
+                "GradingData": [],
+                "Language": [],
+                "NextChoiceId": 4,
+                "NextAnswerId": 1,
+                "QuestionID": "QID12"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID13",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Please provide an overall assessment of this student on a scale of 1 to 10, with 10 indicating complete satisfaction.",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "Please provide an overall assessment of this student on a scale of 1 to 10, with 10 indicating complete satisfaction.",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Alice Johnson_Overall",
+                "QuestionID": "QID13"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID14",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Please provide an overall assessment of this student on a scale of 1 to 10, with 10 indicating complete satisfaction.",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "Please provide an overall assessment of this student on a scale of 1 to 10, with 10 indicating complete satisfaction.",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Robert Singh_Overall",
+                "QuestionID": "QID14"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID15",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Please provide an overall assessment of this student on a scale of 1 to 10, with 10 indicating complete satisfaction.",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "Please provide an overall assessment of this student on a scale of 1 to 10, with 10 indicating complete satisfaction.",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Mei Chang_Overall",
+                "QuestionID": "QID15"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID16",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Do you have any additional feedback that you would like to share with us?",
+                "DefaultChoices": false,
+                "DataExportTag": "Team Alpha_AdditionalFeedback",
+                "QuestionType": "TE",
+                "Selector": "ML",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "InputWidth": 680,
+                    "InputHeight": 29
+                },
+                "QuestionDescription": "Do you have any additional feedback that you would like to share with us?",
+                "Validation": {
+                    "Settings": {}
+                },
+                "GradingData": [],
+                "Language": [],
+                "SearchSource": {
+                    "AllowFreeResponse": "false"
+                },
+                "QuestionID": "QID16"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID17",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Team overall performance",
+                "DefaultChoices": false,
+                "DataExportTag": "Q17",
+                "QuestionType": "DB",
+                "Selector": "TB",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText"
+                },
+                "QuestionDescription": "Team overall performance",
+                "ChoiceOrder": [],
+                "Validation": {
+                    "Settings": {}
+                },
+                "GradingData": [],
+                "Language": [],
+                "NextChoiceId": 4,
+                "NextAnswerId": 1,
+                "QuestionID": "QID17"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID18",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Please rate the team’s overall productivity and your satisfaction with their performance on a scale of 1 to 10 (10 = very satisfied; scores of 7 or below indicate some level of concern).",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "Please rate the team’s overall productivity and your satisfaction with their performance on a scale of 1 to 10 (10 = very satisfied; scores of 7 or below indicate some level of concern).",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Team Beta_OverallSatisfaction",
+                "QuestionID": "QID18"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID19",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Team technical readiness and collaboration experience",
+                "DefaultChoices": false,
+                "DataExportTag": "Q19",
+                "QuestionType": "DB",
+                "Selector": "TB",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText"
+                },
+                "QuestionDescription": "Team technical readiness and collaboration experience",
+                "ChoiceOrder": [],
+                "Validation": {
+                    "Settings": {}
+                },
+                "GradingData": [],
+                "Language": [],
+                "NextChoiceId": 4,
+                "NextAnswerId": 1,
+                "QuestionID": "QID19"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID20",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Is the team technically well-equipped to handle the project? Do they possess the necessary skills and knowledge to successfully complete their tasks?",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "Is the team technically well-equipped to handle the project? Do they possess the necessary skills and knowledge to successfully complete their tasks?",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Team Beta_TechnicalEquipped",
+                "QuestionID": "QID20"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID21",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "To what extent did the students independently propose solutions (score = 10) versus relying on your guidance to determine detailed next steps (score = 0)?",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "To what extent did the students independently propose solutions (score = 10) versus relying on your guidance to determine detailed next steps (score = 0)?",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Team Beta_Independence",
+                "QuestionID": "QID21"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID22",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "How effectively did the students use the meetings with you? How well prepared were they, and did they make efficient use of your time and expertise?",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "How effectively did the students use the meetings with you? How well prepared were they, and did they make efficient use of your time and expertise?",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Team Beta_MeetingUse",
+                "QuestionID": "QID22"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID23",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Are you looking forward to the spring semester? Would you be interested in collaborating on the MIDS Capstone again in the future?",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "Are you looking forward to the spring semester? Would you be interested in collaborating on the MIDS Capstone again in the future?",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Team Beta_FutureCollab",
+                "QuestionID": "QID23"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID24",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Individual student evaluations",
+                "DefaultChoices": false,
+                "DataExportTag": "Q24",
+                "QuestionType": "DB",
+                "Selector": "TB",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText"
+                },
+                "QuestionDescription": "Individual student evaluations",
+                "ChoiceOrder": [],
+                "Validation": {
+                    "Settings": {}
+                },
+                "GradingData": [],
+                "Language": [],
+                "NextChoiceId": 4,
+                "NextAnswerId": 1,
+                "QuestionID": "QID24"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID25",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Please provide an overall assessment of this student on a scale of 1 to 10, with 10 indicating complete satisfaction.",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "Please provide an overall assessment of this student on a scale of 1 to 10, with 10 indicating complete satisfaction.",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Daniel Kim_Overall",
+                "QuestionID": "QID25"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID26",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Please provide an overall assessment of this student on a scale of 1 to 10, with 10 indicating complete satisfaction.",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "Please provide an overall assessment of this student on a scale of 1 to 10, with 10 indicating complete satisfaction.",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Sara Lopez_Overall",
+                "QuestionID": "QID26"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID27",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Do you have any additional feedback that you would like to share with us?",
+                "DefaultChoices": false,
+                "DataExportTag": "Team Beta_AdditionalFeedback",
+                "QuestionType": "TE",
+                "Selector": "ML",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "InputWidth": 680,
+                    "InputHeight": 29
+                },
+                "QuestionDescription": "Do you have any additional feedback that you would like to share with us?",
+                "Validation": {
+                    "Settings": {}
+                },
+                "GradingData": [],
+                "Language": [],
+                "SearchSource": {
+                    "AllowFreeResponse": "false"
+                },
+                "QuestionID": "QID27"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID28",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Team overall performance",
+                "DefaultChoices": false,
+                "DataExportTag": "Q28",
+                "QuestionType": "DB",
+                "Selector": "TB",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText"
+                },
+                "QuestionDescription": "Team overall performance",
+                "ChoiceOrder": [],
+                "Validation": {
+                    "Settings": {}
+                },
+                "GradingData": [],
+                "Language": [],
+                "NextChoiceId": 4,
+                "NextAnswerId": 1,
+                "QuestionID": "QID28"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID29",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Please rate the team’s overall productivity and your satisfaction with their performance on a scale of 1 to 10 (10 = very satisfied; scores of 7 or below indicate some level of concern).",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "Please rate the team’s overall productivity and your satisfaction with their performance on a scale of 1 to 10 (10 = very satisfied; scores of 7 or below indicate some level of concern).",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Team Gamma_OverallSatisfaction",
+                "QuestionID": "QID29"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID30",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Team technical readiness and collaboration experience",
+                "DefaultChoices": false,
+                "DataExportTag": "Q30",
+                "QuestionType": "DB",
+                "Selector": "TB",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText"
+                },
+                "QuestionDescription": "Team technical readiness and collaboration experience",
+                "ChoiceOrder": [],
+                "Validation": {
+                    "Settings": {}
+                },
+                "GradingData": [],
+                "Language": [],
+                "NextChoiceId": 4,
+                "NextAnswerId": 1,
+                "QuestionID": "QID30"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID31",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Is the team technically well-equipped to handle the project? Do they possess the necessary skills and knowledge to successfully complete their tasks?",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "Is the team technically well-equipped to handle the project? Do they possess the necessary skills and knowledge to successfully complete their tasks?",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Team Gamma_TechnicalEquipped",
+                "QuestionID": "QID31"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID32",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "To what extent did the students independently propose solutions (score = 10) versus relying on your guidance to determine detailed next steps (score = 0)?",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "To what extent did the students independently propose solutions (score = 10) versus relying on your guidance to determine detailed next steps (score = 0)?",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Team Gamma_Independence",
+                "QuestionID": "QID32"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID33",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "How effectively did the students use the meetings with you? How well prepared were they, and did they make efficient use of your time and expertise?",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "How effectively did the students use the meetings with you? How well prepared were they, and did they make efficient use of your time and expertise?",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Team Gamma_MeetingUse",
+                "QuestionID": "QID33"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID34",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Are you looking forward to the spring semester? Would you be interested in collaborating on the MIDS Capstone again in the future?",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "Are you looking forward to the spring semester? Would you be interested in collaborating on the MIDS Capstone again in the future?",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Team Gamma_FutureCollab",
+                "QuestionID": "QID34"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID35",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Individual student evaluations",
+                "DefaultChoices": false,
+                "DataExportTag": "Q35",
+                "QuestionType": "DB",
+                "Selector": "TB",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText"
+                },
+                "QuestionDescription": "Individual student evaluations",
+                "ChoiceOrder": [],
+                "Validation": {
+                    "Settings": {}
+                },
+                "GradingData": [],
+                "Language": [],
+                "NextChoiceId": 4,
+                "NextAnswerId": 1,
+                "QuestionID": "QID35"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID36",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Please provide an overall assessment of this student on a scale of 1 to 10, with 10 indicating complete satisfaction.",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "Please provide an overall assessment of this student on a scale of 1 to 10, with 10 indicating complete satisfaction.",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Michael Brown_Overall",
+                "QuestionID": "QID36"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID37",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Please provide an overall assessment of this student on a scale of 1 to 10, with 10 indicating complete satisfaction.",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "Please provide an overall assessment of this student on a scale of 1 to 10, with 10 indicating complete satisfaction.",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Leah Thompson_Overall",
+                "QuestionID": "QID37"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID38",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Please provide an overall assessment of this student on a scale of 1 to 10, with 10 indicating complete satisfaction.",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "Please provide an overall assessment of this student on a scale of 1 to 10, with 10 indicating complete satisfaction.",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Chris Wilson_Overall",
+                "QuestionID": "QID38"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID39",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Please provide an overall assessment of this student on a scale of 1 to 10, with 10 indicating complete satisfaction.",
+                "DefaultChoices": false,
+                "QuestionType": "Slider",
+                "Selector": "STAR",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "CSSliderMin": 0,
+                    "CSSliderMax": 100,
+                    "GridLines": 10,
+                    "NumDecimals": "0",
+                    "ShowValue": false,
+                    "SliderStartPositions": {
+                        "1": 0
+                    },
+                    "StarCount": 10,
+                    "StarType": "discrete",
+                    "MobileFirst": false
+                },
+                "QuestionDescription": "Please provide an overall assessment of this student on a scale of 1 to 10, with 10 indicating complete satisfaction.",
+                "Choices": {
+                    "1": {
+                        "Display": "Rate"
+                    }
+                },
+                "ChoiceOrder": [
+                    1
+                ],
+                "Validation": {
+                    "Settings": {
+                        "ForceResponse": "ON",
+                        "ForceResponseType": "ON",
+                        "Type": "None"
+                    }
+                },
+                "GradingData": [],
+                "Language": [],
+                "Labels": [],
+                "QuestionJS": "",
+                "DataExportTag": "Nina Park_Overall",
+                "QuestionID": "QID39"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "SQ",
+            "PrimaryAttribute": "QID40",
+            "SecondaryAttribute": "",
+            "TertiaryAttribute": null,
+            "Payload": {
+                "QuestionText": "Do you have any additional feedback that you would like to share with us?",
+                "DefaultChoices": false,
+                "DataExportTag": "Team Gamma_AdditionalFeedback",
+                "QuestionType": "TE",
+                "Selector": "ML",
+                "DataVisibility": {
+                    "Private": false,
+                    "Hidden": false
+                },
+                "Configuration": {
+                    "QuestionDescriptionOption": "UseText",
+                    "InputWidth": 680,
+                    "InputHeight": 29
+                },
+                "QuestionDescription": "Do you have any additional feedback that you would like to share with us?",
+                "Validation": {
+                    "Settings": {}
+                },
+                "GradingData": [],
+                "Language": [],
+                "SearchSource": {
+                    "AllowFreeResponse": "false"
+                },
+                "QuestionID": "QID40"
+            }
+        },
+        {
+            "SurveyID": "SV_d6YW3IPnXRICDIi",
+            "Element": "STAT",
+            "PrimaryAttribute": "Survey Statistics",
+            "SecondaryAttribute": null,
+            "TertiaryAttribute": null,
+            "Payload": {
+                "MobileCompatible": true,
+                "ID": "Survey Statistics"
+            }
+        }
+    ]
+}
