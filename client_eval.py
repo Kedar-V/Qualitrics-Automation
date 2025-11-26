@@ -332,7 +332,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Generate Client Evaluation Qualtrics QSF from a project team CSV."
     )
-    parser.add_argument("--input", required=True, help="Path to input CSV")
+    parser.add_argument("--students", required=True, help="Path to input CSV")
     parser.add_argument("--output", required=True, help="Path to output QSF file")
     args = parser.parse_args()
-    build_client_survey(args.input, args.output)
+    build_client_survey(args.students, args.output)

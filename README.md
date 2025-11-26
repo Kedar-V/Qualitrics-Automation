@@ -23,16 +23,40 @@ python -m pip install -r requirements.txt
 
 ## Usage
 
-1) Generate a Qualtrics survey template
+1) Generate a client evaluation survey template
 
 ```sh
-python main.py --input Project_Groups_Synthetic_data.csv --output generated.qsf
+python3 client_eval.py \
+  --students data/data.csv \
+  --output generated/client_evaluation.qsf
 ```
 
-- `--input`: CSV containing team/member information (see `data.csv` as an example).
+- `--students`: CSV containing team/member  information (see data/data.csv as an example).
+- `--output`: Path to write the generated `.qsf` file for client evaluations.
+
+2) Generate a mentor evaluation survey template
+
+```sh
+python3 mentor_eval.py \
+  --students data/data.csv \
+  --mentors data/mentor.csv \
+  --output generated/mentor_evaluation.qsf
+```
+
+- `--students`: CSV containing student/mentee information (see `data/data.csv` as an example).
+- `--mentors`: CSV containing mentor information (see data/mentor.csv as an example).
+- `--output`: Path to write the generated `.qsf` file for mentor evaluations.
+
+3) Generate a Qualtrics survey template (legacy)
+
+```sh
+python main.py --input data/data.csv --output generated.qsf
+```
+
+- `--input`: CSV containing team/member information (see `data/data.csv` as an example).
 - `--output`: Path to write the generated `.qsf` file.
 
-2) Generate evaluation reports from survey results
+4) Generate evaluation reports from survey results
 
 ```sh
 python report.py --input survey_data.csv --output SurveySummary.csv
@@ -43,7 +67,9 @@ python report.py --input survey_data.csv --output SurveySummary.csv
 
 ## Project layout
 
-- `main.py` — builder for `.qsf` templates.
+- `main.py` — builder for `.qsf` templates (legacy).
+- `client_eval.py` — generates client evaluation survey templates.
+- `mentor_eval.py` — generates mentor evaluation survey templates.
 - `report.py` — report generation and plotting.
 - `src/Builder.py`, `src/Survey.py`, `src/Templates.py` — core code that constructs the survey and templates.
 - `data.csv`, `survey_data.csv`, `SurveySummary.csv` — example data and outputs.
