@@ -1,0 +1,56 @@
+{
+    "teams": {
+        "A": [
+            "Hicks, Paul",
+            "Johnson, Brenda",
+            "Ward, Kayla"
+        ],
+        "B": [
+            "Frazier, John",
+            "Skinner, Mary",
+            "Sanchez, John",
+            "Roberts, Kelly",
+            "Jackson, Maurice"
+        ],
+        "C": [
+            "Wilson, Marcus",
+            "Lee, Katie",
+            "Miller, Joseph",
+            "Jones, Kelly",
+            "Mueller, Katrina"
+        ],
+        "D": [
+            "Page, Christopher",
+            "Silva, James",
+            "Mcintyre, Julie",
+            "Byrd, Felicia"
+        ],
+        "E": [
+            "Jackson, Tiffany",
+            "Scott, William",
+            "Ramirez, Steven",
+            "Young, Judith",
+            "Mccormick, Sherri"
+        ],
+        "F": [
+            "Robbins, Nathan",
+            "Brown, Christopher",
+            "Lewis, Andrew",
+            "Williams, Kimberly"
+        ],
+        "G": [
+            "Russell, Dillon",
+            "Shaffer, Adam",
+            "Jackson, Holly"
+        ]
+    },
+    "mentors": {
+        "A": "Dr. Alice Morgan",
+        "B": "Dr. Brian Patel",
+        "C": "Dr. Clara Hughes",
+        "D": "Dr. Daniel Kim",
+        "E": "Dr. Emma Rossi",
+        "F": "Dr. Felix Turner",
+        "G": "Dr. Grace Chen"
+    }
+}

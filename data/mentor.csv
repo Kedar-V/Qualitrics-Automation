@@ -1,10 +1,8 @@
-group_name,name,mentor_name
-Team Alpha,Alice Johnson,Dr. Emily Carter
-Team Alpha,Robert Singh,Dr. Emily Carter
-Team Alpha,Mei Chang,Dr. Emily Carter
-Team Beta,Daniel Kim,Prof. Laura Bennett
-Team Beta,Sara Lopez,Prof. Laura Bennett
-Team Gamma,Michael Brown,Dr. Arjun Patel
-Team Gamma,Leah Thompson,Dr. Arjun Patel
-Team Gamma,Chris Wilson,Dr. Arjun Patel
-Team Gamma,Nina Park,Dr. Arjun Patel
+group_name,mentor_name
+A,Dr. Alice Morgan
+B,Dr. Brian Patel
+C,Dr. Clara Hughes
+D,Dr. Daniel Kim
+E,Dr. Emma Rossi
+F,Dr. Felix Turner
+G,Dr. Grace Chen

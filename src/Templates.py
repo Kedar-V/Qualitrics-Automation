@@ -27,7 +27,6 @@ class TEMPLATES:
         self.QUESTIONS = {"SQ": self._b.Q_TEMPLATES}
 
     def get_branch(self, member, block, team, Question_ID_Team):
-        print(Question_ID_Team)
         return self._b.branch(member, block, team, Question_ID_Team)
 
     def get_standard_block(self, desc, TYPE='Standard'):

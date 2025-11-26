@@ -1,0 +1,99 @@
+{
+    "teams": {
+        "A": [
+            "Hicks, Paul",
+            "Johnson, Brenda",
+            "Ward, Kayla"
+        ],
+        "B": [
+            "Frazier, John",
+            "Skinner, Mary",
+            "Sanchez, John",
+            "Roberts, Kelly",
+            "Jackson, Maurice"
+        ],
+        "C": [
+            "Wilson, Marcus",
+            "Lee, Katie",
+            "Miller, Joseph",
+            "Jones, Kelly",
+            "Mueller, Katrina"
+        ],
+        "D": [
+            "Page, Christopher",
+            "Silva, James",
+            "Mcintyre, Julie",
+            "Byrd, Felicia"
+        ],
+        "E": [
+            "Jackson, Tiffany",
+            "Scott, William",
+            "Ramirez, Steven",
+            "Young, Judith",
+            "Mccormick, Sherri"
+        ],
+        "F": [
+            "Robbins, Nathan",
+            "Brown, Christopher",
+            "Lewis, Andrew",
+            "Williams, Kimberly"
+        ],
+        "G": [
+            "Russell, Dillon",
+            "Shaffer, Adam",
+            "Jackson, Holly"
+        ],
+        "H": [
+            "Spears, Troy",
+            "Parker, Jason",
+            "Pollard, Michael"
+        ],
+        "I": [
+            "Holt, Rachel",
+            "Taylor, Denise",
+            "Espinoza, Mark",
+            "Vance, Jack"
+        ],
+        "J": [
+            "Sherman, Corey",
+            "Yates, Katrina",
+            "Thompson, Michael",
+            "Kelly, Juan",
+            "Mathews, Timothy"
+        ],
+        "K": [
+            "Leon, Cody",
+            "Murray, Donna",
+            "Irwin, William",
+            "Price, Melissa",
+            "Campbell, Brent"
+        ],
+        "L": [
+            "Liu, Kenneth",
+            "Williams, Margaret",
+            "Baker, Monica",
+            "Decker, Daniel",
+            "Jennings, Susan"
+        ],
+        "M": [
+            "Hawkins, Jacob",
+            "West, Gerald",
+            "Ewing, Steven",
+            "Wilson, Ray",
+            "Hall, Bridget"
+        ],
+        "N": [
+            "Murphy, Troy",
+            "Villanueva, Daniel",
+            "Ingram, Elizabeth",
+            "Carroll, Cody"
+        ],
+        "O": [
+            "Martinez, Alejandro",
+            "Gates, Kendra",
+            "Holloway, Tonya",
+            "Green, Stephanie",
+            "Shaw, Frank"
+        ]
+    }
+}

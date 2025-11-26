@@ -10,9 +10,12 @@ from Templates import TEMPLATES
 from Constants import Constants
 
 
-def build_survey(input_csv: str, output_qsf: str):
+def build_survey(data_csv: str, mentor_csv:str, output_qsf: str):
     # --- Load and prepare data ---
-    df = pd.read_csv(input_csv)
+    df1 = pd.read_csv(data_csv)
+    df2 = pd.read_csv(mentor_csv)
+    df = pd.merge(df1, df2, on='group_name', how='inner')
+
     df = df.dropna(subset=["group_name"])
 
     # Validate required columns
@@ -27,7 +30,7 @@ def build_survey(input_csv: str, output_qsf: str):
     team_mentors = df.groupby("group_name")["mentor_name"].first().to_dict()
 
     # Save for reference
-    with open("data/teams_mentors.json", "w") as f:
+    with open("debug/teams_mentors.json", "w") as f:
         json.dump({"teams": team_members, "mentors": team_mentors}, f, indent=4)
 
     # --- Build team / choice mappings ---
@@ -357,7 +360,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Generate Mentor Evaluation Qualtrics QSF from a project team CSV."
     )
-    parser.add_argument("--input", required=True)
+    parser.add_argument("--students", required=True)
+    parser.add_argument("--mentors", required=True)
     parser.add_argument("--output", required=True)
     args = parser.parse_args()
-    build_survey(args.input, args.output)
+    build_survey(args.students, args.mentors, args.output)

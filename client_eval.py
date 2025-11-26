@@ -25,7 +25,7 @@ def build_client_survey(input_csv: str, output_qsf: str):
     team_members = df.groupby("group_name")["name"].apply(list).to_dict()
 
     # Save for reference
-    with open("data/client_teams.json", "w") as f:
+    with open("debug/client_teams.json", "w") as f:
         json.dump({"teams": team_members}, f, indent=4)
 
     # --- Build dropdown choices ---
@@ -233,7 +233,7 @@ def build_client_survey(input_csv: str, output_qsf: str):
                 Template.get_question(
                     "SLIDER",
                     (
-                        "Please provide an overall assessment of this student on a scale of 1 to 10, "
+                        f"Please provide an overall assessment for {member} on a scale of 1 to 10, "
                         "with 10 indicating complete satisfaction."
                     ),
                     {"DataExportTag": f"{member}_Overall", "Required": True},
