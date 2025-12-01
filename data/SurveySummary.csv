@@ -1,0 +1,9 @@
+Name,Team,Avg Score,% Above 8,% Below 5,Raw Evaluations
+"Frazier, John",B,6.67,66.7%,33.3%,"{'Test3': {'Communication': 9.0, 'Technical': 10.0, 'Reliability': 1.0}}"
+"Hicks, Paul",A,7.73,33.3%,16.7%,"{'Kedar': {'Communication': 7.199999999999999, 'Technical': 10.0, 'Reliability': 7.199999999999999}, 'Test': {'Communication': 8.0, 'Technical': 10.0, 'Reliability': 4.0}}"
+"Jackson, Maurice",B,8.33,66.7%,0.0%,"{'Test3': {'Communication': 10.0, 'Technical': 5.0, 'Reliability': 10.0}}"
+"Johnson, Brenda",A,6.88,50.0%,33.3%,"{'Kedar': {'Communication': 7.8, 'Technical': 2.5, 'Reliability': 9.0}, 'Test': {'Communication': 10.0, 'Technical': 2.0, 'Reliability': 10.0}}"
+"Roberts, Kelly",B,7.67,66.7%,0.0%,"{'Test3': {'Communication': 9.0, 'Technical': 5.0, 'Reliability': 9.0}}"
+"Sanchez, John",B,7.67,66.7%,33.3%,"{'Test3': {'Communication': 10.0, 'Technical': 3.0, 'Reliability': 10.0}}"
+"Skinner, Mary",B,6.33,33.3%,33.3%,"{'Test3': {'Communication': 7.0, 'Technical': 10.0, 'Reliability': 2.0}}"
+"Ward, Kayla",A,5.68,33.3%,66.7%,"{'Kedar': {'Communication': 3.7, 'Technical': 3.7, 'Reliability': 3.7}, 'Test': {'Communication': 9.0, 'Technical': 10.0, 'Reliability': 4.0}}"
