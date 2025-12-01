@@ -87,17 +87,11 @@ def main():
     # -----------------------------
     # DETECT STUDENT RATING BLOCKS
     # -----------------------------
-    # Pattern from your header:
-    # "Hicks, Paul_Communication_1"
-    # "Hicks, Paul_Technical_1"
-    # "Hicks, Paul_Reliability_1"
-    # "Hicks, Paul_Feedback"
     comm_re = re.compile(r"^(.*)_Communication_1$")
     tech_re = re.compile(r"^(.*)_Technical_1$")
     reli_re = re.compile(r"^(.*)_Reliability_1$")
     fb_re   = re.compile(r"^(.*)_Feedback$")
 
-    # For each student, track metric columns & feedback column
     metric_cols = {}   # student -> [comm_col, tech_col, reli_col]
     feedback_cols = {} # student -> feedback_col
 
@@ -126,15 +120,12 @@ def main():
             feedback_cols[student] = col
             continue
 
-    # -----------------------------
-    # WIDE → LONG (ONE ROW PER evaluator–student–submission)
-    # -----------------------------
     long_records = []
 
     for _, row in df.iterrows():
         evaluator = str(row[evaluator_col]).strip()
         if evaluator == "" or evaluator.lower() in ["nan", "none"]:
-            continue  # skip junk
+            continue 
 
         team = row.get(team_col, None)
         ts = row[ts_col]
@@ -189,7 +180,7 @@ def main():
     )
 
     # -----------------------------
-    # APPLY 70–30 WEIGHTING PER evaluator–student
+    # APPLY WEIGHTING PER evaluator–student
     # -----------------------------
     def compute_weighted(group):
         scores = group["score"].tolist()
@@ -237,7 +228,7 @@ def main():
     # -----------------------------
     # CONSOLIDATED FEEDBACK PER STUDENT
     # -----------------------------
-    
+
     # Placeholder for now
     feedback_df = (
         long_df.groupby("student")
