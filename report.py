@@ -32,14 +32,17 @@ MEMBER_TEMPLATE = {
 class SurveySummarizer:
     """Transforms Qualtrics data and computes per-member summary statistics."""
 
-    def __init__(self, df: pd.DataFrame):
+    def __init__(self, df: pd.DataFrame, high_threshold: float, low_threshold: float):
         self.df = df.fillna("")
+        self.high_threshold = high_threshold
+        self.low_threshold = low_threshold
 
     def expand_responses(self) -> pd.DataFrame:
         """Convert wide Qualtrics data to long format, where each row is a (reviewer, member) record."""
         members = []
 
         for i, row in self.df.iterrows():
+            # Skip Qualtrics label/import rows if they still exist
             if i < 2:
                 continue
 
@@ -61,6 +64,7 @@ class SurveySummarizer:
                     if member != curr_name:
                         if curr_name:
                             members.append(member_data)
+
                         curr_name = member
                         member_data = copy.deepcopy(MEMBER_TEMPLATE)
                         member_data["Reviewer"] = row.get("Name", "")
@@ -84,9 +88,18 @@ class SurveySummarizer:
                 group[col] = pd.to_numeric(group[col], errors="coerce")
 
             scores = group[score_cols].to_numpy(dtype=float).flatten()
+
             avg_score = round(scores.mean(), 2) if len(scores) > 0 else 0.0
-            above_8 = (scores > 8).sum() / len(scores) * 100 if len(scores) else 0
-            below_5 = (scores < 5).sum() / len(scores) * 100 if len(scores) else 0
+
+            above_high = (
+                (scores >= self.high_threshold).sum() / len(scores) * 100
+                if len(scores) else 0
+            )
+
+            below_low = (
+                (scores < self.low_threshold).sum() / len(scores) * 100
+                if len(scores) else 0
+            )
 
             feedback_summary = [
                 str(f).strip()
@@ -108,8 +121,8 @@ class SurveySummarizer:
 
             return pd.Series({
                 "Avg Score": avg_score,
-                "% Above 8": f"{above_8:.1f}%",
-                "% Below 5": f"{below_5:.1f}%",
+                f"% Above {self.high_threshold}": f"{above_high:.1f}%",
+                f"% Below {self.low_threshold}": f"{below_low:.1f}%",
                 "Feedback Summary": feedback_summary,
                 "Raw Evaluations": raw_dict
             })
@@ -160,12 +173,20 @@ class Plotter:
             print(f"Saved {skill} chart to {output_path}")
 
 
-def process_survey(input_csv: str, output_csv: str, output_json: str = None, plot_dir: str = "plots"):
+def process_survey(
+    input_csv: str,
+    output_csv: str,
+    output_json: str = None,
+    plot_dir: str = "plots",
+    high_threshold: float = 8.0,
+    low_threshold: float = 5.0
+):
     """Full pipeline: load, transform, summarize, export, and plot."""
     df = pd.read_csv(input_csv)
     print(f"Loaded {len(df)} survey responses from {input_csv}")
 
-    summarizer = SurveySummarizer(df)
+    summarizer = SurveySummarizer(df, high_threshold, low_threshold)
+
     long_df = summarizer.expand_responses()
     print(f"Expanded into {len(long_df)} (reviewer, member) pairs")
 
@@ -187,10 +208,24 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Generate summarized peer-evaluation report from Qualtrics survey CSV."
     )
+    
     parser.add_argument("--input", required=True, help="Path to Qualtrics survey CSV file.")
     parser.add_argument("--output", required=True, help="Path to save summarized CSV report.")
     parser.add_argument("--json", required=False, help="Optional path to save JSON output.")
     parser.add_argument("--plots", required=False, default="plots", help="Directory to save generated plots.")
+
+    parser.add_argument("--high-threshold", type=float, default=8.0,
+                        help="High score threshold (default: 8)")
+    parser.add_argument("--low-threshold", type=float, default=5.0,
+                        help="Low score threshold (default: 5)")
+
     args = parser.parse_args()
 
-    process_survey(args.input, args.output, args.json, args.plots)
+    process_survey(
+        args.input,
+        args.output,
+        args.json,
+        args.plots,
+        args.high_threshold,
+        args.low_threshold
+    )

@@ -47,7 +47,7 @@ python3 mentor_eval.py \
 - `--mentors`: CSV containing mentor information (see data/mentor.csv as an example).
 - `--output`: Path to write the generated `.qsf` file for mentor evaluations.
 
-3) Generate a Qualtrics survey template (legacy)
+3) Generate a Student Eval Qualtrics survey
 
 ```sh
 python main.py --input data/data.csv --output generated.qsf
@@ -56,10 +56,29 @@ python main.py --input data/data.csv --output generated.qsf
 - `--input`: CSV containing team/member information (see `data/data.csv` as an example).
 - `--output`: Path to write the generated `.qsf` file.
 
-4) Generate evaluation reports from survey results
+4) Generate grades per student from peer evaluations
 
 ```sh
-python report.py --input survey_data.csv --output SurveySummary.csv
+python3 grade.py \
+  --input data/survey_data.csv \
+  --output data/grade_per_student.csv \
+  --high-threshold 8 \
+  --low-threshold 7 \
+  --last-weight 0.7 \
+  --prev-weight 0.3
+```
+
+- `--input`: CSV of survey responses (exported from Qualtrics peer evaluation).
+- `--output`: CSV file to write grade summaries per student.
+- `--high-threshold`: Score threshold for "above threshold" classification (default: 8).
+- `--low-threshold`: Score threshold for "below threshold" / "Attention" action (default: 5).
+- `--last-weight`: Weight for the most recent submission (default: 0.7).
+- `--prev-weight`: Weight for previous submissions combined (default: 0.3).
+
+5) Generate evaluation reports from survey results (legacy)
+
+```sh
+python report.py --input data/survey_data.csv --output data/SurveySummary.csv
 ```
 
 - `--input`: CSV of survey responses (exported from Qualtrics or your collection pipeline).
@@ -70,7 +89,8 @@ python report.py --input survey_data.csv --output SurveySummary.csv
 - `main.py` — builder for `.qsf` templates (legacy).
 - `client_eval.py` — generates client evaluation survey templates.
 - `mentor_eval.py` — generates mentor evaluation survey templates.
-- `report.py` — report generation and plotting.
+- `grade.py` — generates grade summaries and action flags per student from peer evaluation responses.
+- `report.py` — report generation and plotting (legacy).
 - `src/Builder.py`, `src/Survey.py`, `src/Templates.py` — core code that constructs the survey and templates.
 - `data.csv`, `survey_data.csv`, `SurveySummary.csv` — example data and outputs.
 - `plots/` — directory where generated plots are stored.
