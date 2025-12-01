@@ -10,10 +10,9 @@ import matplotlib.pyplot as plt
 # CONFIGURATION
 # -------------------------------------------------------------------------
 METADATA_COLS = [
-    'StartDate', 'EndDate', 'Status', 'IPAddress', 'Progress',
-    'Duration (in seconds)', 'Finished', 'RecordedDate', 'ResponseId',
-    'RecipientLastName', 'RecipientFirstName', 'RecipientEmail',
-    'ExternalReference', 'LocationLatitude', 'LocationLongitude',
+    'StartDate', 'EndDate', 'Status', 'IPAddress', 'Progress', 'Duration (in seconds)',
+    'Finished', 'RecordedDate', 'ResponseId', 'RecipientLastName', 'RecipientFirstName',
+    'RecipientEmail', 'ExternalReference', 'LocationLatitude', 'LocationLongitude',
     'DistributionChannel', 'UserLanguage'
 ]
 
@@ -21,14 +20,12 @@ DETAILS_COLS = ['Name', 'DukeID', 'Email', 'Team', 'DirectorComment']
 
 MEMBER_TEMPLATE = {
     'Name': '',
-    'Team': '',
     'Communication': '',
     'Technical': '',
     'Reliability': '',
     'Feedback': '',
     'Reviewer': '',
-    'DirectorComment': '',
-    'RecordedDate': ''
+    'DirectorComment': ''
 }
 
 
@@ -64,16 +61,11 @@ class SurveySummarizer:
                     if member != curr_name:
                         if curr_name:
                             members.append(member_data)
-
                         curr_name = member
                         member_data = copy.deepcopy(MEMBER_TEMPLATE)
                         member_data["Reviewer"] = row.get("Name", "")
                         member_data["Name"] = curr_name
-                        member_data["Team"] = row.get("Team", "")
                         member_data["DirectorComment"] = row.get("DirectorComment", "")
-                        member_data["RecordedDate"] = pd.to_datetime(
-                            row.get("RecordedDate", ""), errors="coerce"
-                        )
 
                     member_data[skill] = val
 
@@ -84,108 +76,45 @@ class SurveySummarizer:
         return long_df
 
     def summarize(self, long_df: pd.DataFrame) -> pd.DataFrame:
-        """Compute per-member weighted averages excluding self-evaluations."""
+        """Compute per-member averages, percentages, and feedback summaries."""
+        def summarize_member(group: pd.DataFrame) -> pd.Series:
+            score_cols = [c for c in ["Communication", "Technical", "Reliability"] if c in group.columns]
 
-        # ✅ REMOVE SELF EVALUATIONS FIRST
-        filtered = long_df[long_df["Reviewer"] != long_df["Name"]].copy()
-
-        def weighted_scores(group):
-            group = group.sort_values("RecordedDate")
-
-            score_cols = ["Communication", "Technical", "Reliability"]
             for col in score_cols:
                 group[col] = pd.to_numeric(group[col], errors="coerce")
 
-            if len(group) == 1:
-                return group.iloc[0][score_cols]
+            scores = group[score_cols].to_numpy(dtype=float).flatten()
+            avg_score = round(scores.mean(), 2) if len(scores) > 0 else 0.0
+            above_8 = (scores > 8).sum() / len(scores) * 100 if len(scores) else 0
+            below_5 = (scores < 5).sum() / len(scores) * 100 if len(scores) else 0
 
-            latest = group.iloc[-1][score_cols]
-            previous = group.iloc[:-1][score_cols].mean()
-
-            return 0.7 * latest + 0.3 * previous
-
-        # ✅ Apply weighting per (Member, Reviewer)
-        weighted = (
-            filtered
-            .groupby(["Name", "Reviewer"], group_keys=False)
-            .apply(weighted_scores)
-            .reset_index()
-        )
-
-        weighted_long = pd.merge(
-            weighted,
-            filtered[["Name", "Team"]].drop_duplicates(),
-            on="Name",
-            how="left"
-        )
-
-    def summarize_member(group: pd.DataFrame) -> pd.Series:
-        score_vals = group[["Communication", "Technical", "Reliability"]] \
-            .to_numpy(dtype=float).flatten()
-
-        avg_score = round(score_vals.mean(), 2)
-        above_8 = (score_vals > 8).sum() / len(score_vals) * 100
-        below_5 = (score_vals < 5).sum() / len(score_vals) * 100
-
-        raw_dict = {
-            row["Reviewer"]: {
-                "Communication": float(row["Communication"]),
-                "Technical": float(row["Technical"]),
-                "Reliability": float(row["Reliability"]),
-            }
-            for _, row in group.iterrows()
-        }
-
-        return pd.Series({
-            "Team": group["Team"].iloc[0],
-            "Avg Score": avg_score,
-            "% Above 8": f"{above_8:.1f}%",
-            "% Below 5": f"{below_5:.1f}%",
-            "Raw Evaluations": raw_dict
-        })
-
-    summarized = (
-        weighted_long
-        .groupby("Name", group_keys=False)
-        .apply(summarize_member)
-        .reset_index()
-    )
-
-    return summarized
-
-
-        def summarize_member(group: pd.DataFrame) -> pd.Series:
-            score_vals = group[["Communication", "Technical", "Reliability"]] \
-                            .to_numpy(dtype=float).flatten()
-
-            avg_score = round(score_vals.mean(), 2)
-            above_8 = (score_vals > 8).sum() / len(score_vals) * 100
-            below_5 = (score_vals < 5).sum() / len(score_vals) * 100
+            feedback_summary = [
+                str(f).strip()
+                for f in group["Feedback"].tolist()
+                if str(f).strip() not in ["", "0", "nan"]
+            ]
 
             raw_dict = {
-                row["Reviewer"]: {
+                str(row["Reviewer"]): {
                     "Communication": float(row["Communication"]),
                     "Technical": float(row["Technical"]),
                     "Reliability": float(row["Reliability"]),
+                    "Feedback": str(row["Feedback"]),
+                    "DirectorComment": str(row["DirectorComment"]),
                 }
                 for _, row in group.iterrows()
+                if pd.notna(row["Reviewer"])
             }
 
             return pd.Series({
-                "Team": group["Team"].iloc[0],
                 "Avg Score": avg_score,
                 "% Above 8": f"{above_8:.1f}%",
                 "% Below 5": f"{below_5:.1f}%",
+                "Feedback Summary": feedback_summary,
                 "Raw Evaluations": raw_dict
             })
 
-        summarized = (
-            weighted_long
-            .groupby("Name", group_keys=False)
-            .apply(summarize_member)
-            .reset_index()
-        )
-
+        summarized = long_df.groupby("Name", group_keys=False).apply(summarize_member).reset_index()
         return summarized
 
 
@@ -231,8 +160,7 @@ class Plotter:
             print(f"Saved {skill} chart to {output_path}")
 
 
-def process_survey(input_csv: str, output_csv: str,
-                   output_json: str = None, plot_dir: str = "plots"):
+def process_survey(input_csv: str, output_csv: str, output_json: str = None, plot_dir: str = "plots"):
     """Full pipeline: load, transform, summarize, export, and plot."""
     df = pd.read_csv(input_csv)
     print(f"Loaded {len(df)} survey responses from {input_csv}")
@@ -246,9 +174,7 @@ def process_survey(input_csv: str, output_csv: str,
     print(f"Saved summary CSV to {output_csv}")
 
     if output_json:
-        json_output = summarized.to_json(
-            orient="records", indent=2, force_ascii=False
-        )
+        json_output = summarized.to_json(orient="records", indent=2, force_ascii=False)
         with open(output_json, "w", encoding="utf-8") as f:
             f.write(json_output)
         print(f"Saved JSON summary to {output_json}")
@@ -261,15 +187,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Generate summarized peer-evaluation report from Qualtrics survey CSV."
     )
-    parser.add_argument("--input", required=True,
-                        help="Path to Qualtrics survey CSV file.")
-    parser.add_argument("--output", required=True,
-                        help="Path to save summarized CSV report.")
-    parser.add_argument("--json", required=False,
-                        help="Optional path to save JSON output.")
-    parser.add_argument("--plots", required=False, default="plots",
-                        help="Directory to save generated plots.")
-
+    parser.add_argument("--input", required=True, help="Path to Qualtrics survey CSV file.")
+    parser.add_argument("--output", required=True, help="Path to save summarized CSV report.")
+    parser.add_argument("--json", required=False, help="Optional path to save JSON output.")
+    parser.add_argument("--plots", required=False, default="plots", help="Directory to save generated plots.")
     args = parser.parse_args()
 
     process_survey(args.input, args.output, args.json, args.plots)
