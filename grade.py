@@ -60,7 +60,6 @@ def main():
         return matches[0]
 
     # Identify key metadata columns
-    # In your header these are: Name, DukeID, Email, Team, RecordedDate
     if "Name" in df.columns:
         evaluator_col = "Name"
     else:
