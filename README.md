@@ -84,7 +84,32 @@ python report.py --input data/survey_data.csv --output data/SurveySummary.csv
 - `--input`: CSV of survey responses (exported from Qualtrics or your collection pipeline).
 - `--output`: CSV file to write summarized statistics (per-member) and to drive plots.
 
-6) Generate mentor report and optional student-level scores
+6) Generate client report with student-level scores
+
+```sh
+python3 client_report.py \
+  --input data/client_raw.csv \
+  --output generated/client_students.csv \
+  --team-output generated/client_report.csv \
+  --metric-agg-mode weighted \
+  --latest-weight 0.7 \
+  --prev-weight 0.3 \
+  --bonus-multiplier 5 \
+  --high-threshold 8 \
+  --low-threshold 6
+```
+
+- `--input`: Exported Qualtrics client evaluation CSV (see `data/client_raw.csv`).
+- `--output`: Path to write the student-level report with per-student scores for Canvas.
+- `--team-output`: Optional path to write the team-level aggregated report (contains team metrics and evaluator JSON blocks).
+- `--metric-agg-mode`: Aggregation method: `"mean"` (simple average) or `"weighted"` (70/30 latest/previous; default: `mean`).
+- `--latest-weight` / `--prev-weight`: Weights for weighted mode (defaults: 0.7 / 0.3).
+- `--high-threshold` / `--low-threshold`: Score thresholds for `Bonus` and `Attention` actions (defaults: 8 / 6).
+- `--bonus-multiplier`: Bonus percent for "Bonus" action (default: `5` → final score × 1.05).
+
+**Output:** Generates a student-level CSV at `--output` with per-student weighted scores, team metrics, and feedback for Canvas imports.
+
+7) Generate mentor report and optional student-level scores
 
 ```sh
 python3 mentor_report.py \
@@ -100,12 +125,13 @@ python3 mentor_report.py \
 - `--input`: Exported Qualtrics mentor CSV (usually the raw export; see `data/mentor_raw.csv`).
 - `--output`: Path to write the student-level expanded CSV with per-student weighted scores and final scores for Canvas.
 - `--mentor-output`: Optional path to write the team-level mentor report CSV (contains weighted team scores and metadata; defaults to `./generated/mentor_report.csv`).
-- `--high-threshold` / `--low-threshold`: Score thresholds used to classify `Bonus` and `Attention` actions (defaults: 8 / 7).
-- `--bonus`: Bonus percentage applied when a `Bonus` action is detected (default `5` → multiplies final score by 1.05).
-- `--mentor-map`: Optional CSV mapping with columns `group_name, mentor_name` to provide DB mentor names (will populate `Mentor_Name_DB`).
-- **Note:** The mentor map was introduced because the original survey lacked a default value for the mentor name text field, resulting in empty mentor names in submissions.
+- `--high-threshold` / `--low-threshold`: Score thresholds to classify `Bonus` and `Attention` actions (defaults: 8 / 7).
+- `--bonus`: Bonus multiplier percentage (default: `5` → final score × 1.05 for "Bonus" action).
+- `--mentor-map`: Optional CSV with columns `group_name, mentor_name` to populate `Mentor_Name_DB` field.
 
-The script generates a student-level report at `--output` for Canvas grade imports, and optionally a team-level summary at `--mentor-output`.
+**Note:** The mentor map was introduced because the original survey lacked a default value for the mentor name text field, resulting in empty mentor names in submissions.
+
+**Output:** Generates a student-level report at `--output` for Canvas imports, plus an optional team-level summary at `--mentor-output`.
 
 ## Project layout
 

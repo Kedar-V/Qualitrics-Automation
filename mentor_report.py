@@ -578,6 +578,7 @@ def main():
         candidate_feedback_cols,
     )
 
+    # Will be removed
     weighted_df, team_weighted = compute_team_weighting(long_df)
 
     metric_lists_df = build_metric_lists(long_df)

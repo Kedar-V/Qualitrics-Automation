@@ -1,0 +1,12 @@
+team,Organization,Student_Name,Student_Overall_Avg,Feedback_Combined,Action,Team_OverallSatisfaction,Team_TechnicalEquipped,Team_Independence,Team_MeetingUse,Team_FutureCollaboration,Team_Pct_Above_Threshold,Team_Pct_Below_Threshold,Raw_Scores,Team_OverallSatisfaction_Raw,Team_TechnicalEquipped_Raw,Team_Independence_Raw,Team_MeetingUse_Raw,Team_FutureCollaboration_Raw
+A,abcd,"Hicks, Paul",5.067,"['asdsadad', 'asd']",Attention,5.9,8.9,4.7,9.2,5.2,0.0,0.0,"[7.0, 3.0, 6.0, 5.0]","[8.0, 5.0, 4.0, 6.0]","[7.0, 10.0, 9.0, 9.0]","[10.0, 5.0, 4.0, 4.0]","[4.0, 10.0, 8.0, 10.0]","[10.0, 4.0, 10.0, 4.0]"
+A,abcd,"Johnson, Brenda",10.0,"['asdsadad', 'asd']",Bonus,5.9,8.9,4.7,9.2,5.2,0.0,0.0,"[10.0, 10.0, 10.0, 10.0]","[8.0, 5.0, 4.0, 6.0]","[7.0, 10.0, 9.0, 9.0]","[10.0, 5.0, 4.0, 4.0]","[4.0, 10.0, 8.0, 10.0]","[10.0, 4.0, 10.0, 4.0]"
+A,abcd,"Ward, Kayla",3.433,"['asdsadad', 'asd']",Attention,5.9,8.9,4.7,9.2,5.2,0.0,0.0,"[4.0, 3.0, 4.0, 3.0]","[8.0, 5.0, 4.0, 6.0]","[7.0, 10.0, 9.0, 9.0]","[10.0, 5.0, 4.0, 4.0]","[4.0, 10.0, 8.0, 10.0]","[10.0, 4.0, 10.0, 4.0]"
+D,gfh,"Byrd, Felicia",10.0,['asdsadad'],Bonus,6.0,10.0,4.0,10.0,4.0,0.0,0.0,[10.0],[6.0],[10.0],[4.0],[10.0],[4.0]
+D,gfh,"Mcintyre, Julie",10.0,['asdsadad'],Bonus,6.0,10.0,4.0,10.0,4.0,0.0,0.0,[10.0],[6.0],[10.0],[4.0],[10.0],[4.0]
+D,gfh,"Page, Christopher",5.0,['asdsadad'],Attention,6.0,10.0,4.0,10.0,4.0,0.0,0.0,[5.0],[6.0],[10.0],[4.0],[10.0],[4.0]
+D,gfh,"Silva, James",10.0,['asdsadad'],Bonus,6.0,10.0,4.0,10.0,4.0,0.0,0.0,[10.0],[6.0],[10.0],[4.0],[10.0],[4.0]
+I,kd,"Espinoza, Mark",8.0,['ad'],Normal,6.0,2.0,10.0,3.0,10.0,0.0,0.0,[8.0],[6.0],[2.0],[10.0],[3.0],[10.0]
+I,kd,"Holt, Rachel",3.0,['ad'],Attention,6.0,2.0,10.0,3.0,10.0,0.0,0.0,[3.0],[6.0],[2.0],[10.0],[3.0],[10.0]
+I,kd,"Taylor, Denise",3.0,['ad'],Attention,6.0,2.0,10.0,3.0,10.0,0.0,0.0,[3.0],[6.0],[2.0],[10.0],[3.0],[10.0]
+I,kd,"Vance, Jack",10.0,['ad'],Bonus,6.0,2.0,10.0,3.0,10.0,0.0,0.0,[10.0],[6.0],[2.0],[10.0],[3.0],[10.0]
