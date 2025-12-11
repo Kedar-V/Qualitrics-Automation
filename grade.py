@@ -15,14 +15,10 @@ def parse_args():
     )
     p.add_argument("--input", required=True, help="Input Qualtrics CSV")
     p.add_argument("--output", required=True, help="Output grade-per-student CSV")
-    p.add_argument("--high-threshold", type=float, default=8,
-                   help="High threshold (default: 8)")
-    p.add_argument("--low-threshold", type=float, default=5,
-                   help="Low threshold (default: 5)")
-    p.add_argument("--last-weight", type=float, default=0.7,
-                   help="Weight for last submission (default: 0.7)")
-    p.add_argument("--prev-weight", type=float, default=0.3,
-                   help="Weight for previous submissions combined (default: 0.3)")
+    p.add_argument("--high-threshold", type=float, default=8)
+    p.add_argument("--low-threshold", type=float, default=5)
+    p.add_argument("--last-weight", type=float, default=0.7)
+    p.add_argument("--prev-weight", type=float, default=0.3)
     return p.parse_args()
 
 
@@ -38,50 +34,28 @@ def main():
     # LOAD & CLEAN RAW CSV
     # -----------------------------
     try:
-        # keep row 0 as header, skip Qualtrics label & ImportId rows (1 and 2)
         df = pd.read_csv(args.input, skiprows=[1, 2])
     except Exception as e:
         print("Failed to load input file:", e)
         sys.exit(1)
 
-    # Normalise column names: strip, collapse spaces
     df.columns = (
-        df.columns
-          .astype(str)
-          .str.strip()
-          .str.replace(r"\s+", " ", regex=True)
+        df.columns.astype(str)
+        .str.strip()
+        .str.replace(r"\s+", " ", regex=True)
     )
 
-    # Helper to find a column by a substring (case insensitive)
     def find_col(part):
         matches = [c for c in df.columns if part.lower() in c.lower()]
         if not matches:
             raise KeyError(f"Required column not found containing: {part}")
         return matches[0]
 
-    # Identify key metadata columns
-    if "Name" in df.columns:
-        evaluator_col = "Name"
-    else:
-        evaluator_col = find_col("Name")
+    evaluator_col = "Name" if "Name" in df.columns else find_col("Name")
+    team_col = "Team" if "Team" in df.columns else find_col("Team")
+    ts_col = "RecordedDate" if "RecordedDate" in df.columns else find_col("Recorded")
 
-    if "Team" in df.columns:
-        team_col = "Team"
-    else:
-        team_col = find_col("Team")
-
-    if "RecordedDate" in df.columns:
-        ts_col = "RecordedDate"
-    else:
-        # fallback if Qualtrics changes it
-        ts_col = find_col("Recorded")
-
-    # Parse timestamps robustly
-    df[ts_col] = pd.to_datetime(
-        df[ts_col],
-        errors="coerce",
-        infer_datetime_format=True
-    )
+    df[ts_col] = pd.to_datetime(df[ts_col], errors="coerce")
 
     # -----------------------------
     # DETECT STUDENT RATING BLOCKS
@@ -91,58 +65,54 @@ def main():
     reli_re = re.compile(r"^(.*)_Reliability_1$")
     fb_re   = re.compile(r"^(.*)_Feedback$")
 
-    metric_cols = {}   # student -> [comm_col, tech_col, reli_col]
-    feedback_cols = {} # student -> feedback_col
+    metric_cols = {}
+    feedback_cols = {}
 
     for col in df.columns:
-        m = comm_re.match(col)
-        if m:
-            student = m.group(1).strip()
-            metric_cols.setdefault(student, set()).add(col)
-            continue
-
-        m = tech_re.match(col)
-        if m:
-            student = m.group(1).strip()
-            metric_cols.setdefault(student, set()).add(col)
-            continue
-
-        m = reli_re.match(col)
-        if m:
-            student = m.group(1).strip()
-            metric_cols.setdefault(student, set()).add(col)
-            continue
+        for regex in [comm_re, tech_re, reli_re]:
+            m = regex.match(col)
+            if m:
+                student = m.group(1).strip()
+                metric_cols.setdefault(student, set()).add(col)
 
         m = fb_re.match(col)
         if m:
             student = m.group(1).strip()
             feedback_cols[student] = col
-            continue
 
     long_records = []
 
+    # -----------------------------
+    # BUILD LONG FORMAT WITH TRUE METRICS
+    # -----------------------------
     for _, row in df.iterrows():
         evaluator = str(row[evaluator_col]).strip()
         if evaluator == "" or evaluator.lower() in ["nan", "none"]:
-            continue 
+            continue
 
-        team = row.get(team_col, None)
+        team = str(row.get(team_col, "")).strip()
         ts = row[ts_col]
 
         for student, cols in metric_cols.items():
-            scores = []
+            metric_map = {}
+            raw_values = []
+
             for c in cols:
                 val = row.get(c, None)
                 if pd.notna(val):
                     try:
-                        scores.append(float(val))
+                        metric_name = c.split("_")[-2]   # Communication / Technical / Reliability
+                        fval = float(val)
+                        metric_map[metric_name] = fval
+                        raw_values.append(fval)
                     except ValueError:
                         pass
 
-            if not scores:
+            if not raw_values:
                 continue
 
-            avg_score = sum(scores) / len(scores)
+            avg_score = sum(raw_values) / len(raw_values)
+
             fb_text = ""
             if student in feedback_cols:
                 fb_val = row.get(feedback_cols[student], "")
@@ -154,32 +124,36 @@ def main():
                 "evaluator": evaluator,
                 "student": student,
                 "score": avg_score,
+                "raw_metrics": metric_map,
+                "raw_values": raw_values,
                 "feedback": fb_text,
                 "timestamp": ts,
             })
 
     if not long_records:
-        print("No valid rating records found – check column patterns.")
+        print("No valid rating records found.")
         sys.exit(1)
 
     long_df = pd.DataFrame(long_records)
 
     # -----------------------------
-    # REMOVE SELF-EVALUATIONS (simple name match, can refine later)
+    # REMOVE SELF EVALS
     # -----------------------------
     long_df = long_df[
         long_df["evaluator"].str.lower() != long_df["student"].str.lower()
     ].copy()
 
     # -----------------------------
-    # SORT FOR MULTI-SUBMISSION WEIGHTING
+    # STABLE SORT FOR WEIGHTING
     # -----------------------------
+    long_df["submission_order"] = range(len(long_df))
+
     long_df = long_df.sort_values(
-        by=["evaluator", "student", "timestamp"]
+        by=["evaluator", "student", "timestamp", "submission_order"]
     )
 
     # -----------------------------
-    # APPLY WEIGHTING PER evaluator–student
+    # WEIGHTING (AVG PER SUBMISSION)
     # -----------------------------
     def compute_weighted(group):
         scores = group["score"].tolist()
@@ -200,22 +174,41 @@ def main():
 
     weighted_df = (
         long_df.groupby(["evaluator", "student", "team"])
-               .apply(compute_weighted)
-               .reset_index()
+        .apply(compute_weighted)
+        .reset_index()
     )
 
     # -----------------------------
-    # RAW EVALUATIONS JSON PER STUDENT
+    # RAW EVALUATIONS JSON (MULTI-SUBMISSION + WEIGHTED)
     # -----------------------------
+    raw_grouped = (
+        long_df.groupby(["student", "evaluator", "team"])
+        .apply(lambda x: pd.Series({
+            "scores": x["raw_metrics"].tolist(),
+            "timestamps": x["timestamp"].astype(str).tolist(),
+            "avg_scores": x["score"].round(3).tolist()
+        }))
+        .reset_index()
+    )
+
+    raw_grouped = raw_grouped.merge(
+        weighted_df[["student", "evaluator", "Weighted_Score"]],
+        on=["student", "evaluator"],
+        how="left"
+    )
+
     raw_eval_df = (
-        weighted_df.groupby("student")
+        raw_grouped.groupby("student")
         .apply(lambda x: json.dumps(
             [
                 {
+                    "team": r["team"],
                     "evaluator": r["evaluator"],
-                    "scores": r["Raw_Scores"],
-                    "timestamps": r["Timestamps"],
-                    "weighted_score": round(r["Weighted_Score"], 3),
+                    "scores": r["scores"],
+                    "timestamps": r["timestamps"],
+                    "avg_scores": r["avg_scores"],
+                    "weighted_score": round(r["Weighted_Score"], 3)
+                        if pd.notna(r["Weighted_Score"]) else None,
                 }
                 for _, r in x.iterrows()
             ],
@@ -225,22 +218,26 @@ def main():
     )
 
     # -----------------------------
-    # CONSOLIDATED FEEDBACK PER STUDENT
+    # FEEDBACK SUMMARY AS DICT (JSON SAFE)
     # -----------------------------
-
-    # Placeholder for now
     feedback_df = (
-        long_df.groupby("student")
-               .apply(lambda x: " | ".join(
-                   f"{r['evaluator']}: {str(r['feedback'])}"
-                   for _, r in x.iterrows()
-                   if str(r["feedback"]).strip() != ""
-               ))
-               .reset_index(name="Feedback_Summary")
+        long_df[long_df["feedback"].astype(str).str.strip() != ""]
+        .groupby(["student", "evaluator"])["feedback"]
+        .apply(list)
+        .reset_index()
+        .groupby("student")
+        .apply(lambda x: json.dumps(
+            {
+                r["evaluator"]: r["feedback"]
+                for _, r in x.iterrows()
+            },
+            ensure_ascii=False
+        ))
+        .reset_index(name="Feedback_Summary")
     )
 
     # -----------------------------
-    # FINAL GRADE METRICS PER STUDENT
+    # FINAL GRADE METRICS
     # -----------------------------
     grade_df = (
         weighted_df.groupby(["team", "student"])
@@ -255,16 +252,16 @@ def main():
     )
 
     # -----------------------------
-    # ACTION COLUMN
+    # ACTION (PERCENT BASED)
     # -----------------------------
-    def classify_action(avg):
-        if round(avg, 6) == 10:
+    def classify_action(row):
+        if row["Pct_Above_Threshold"] == 100:
             return "Bonus"
-        if avg <= LOW:
+        if row["Pct_Below_Threshold"] >= 50:
             return "Attention"
         return "Normal"
 
-    grade_df["Action"] = grade_df["Avg_Score"].apply(classify_action)
+    grade_df["Action"] = grade_df.apply(classify_action, axis=1)
 
     # -----------------------------
     # MERGE EVERYTHING

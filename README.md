@@ -84,6 +84,28 @@ python report.py --input data/survey_data.csv --output data/SurveySummary.csv
 - `--input`: CSV of survey responses (exported from Qualtrics or your collection pipeline).
 - `--output`: CSV file to write summarized statistics (per-member) and to drive plots.
 
+6) Generate mentor report and optional student-level scores
+
+```sh
+python3 mentor_report.py \
+  --input data/mentor_raw.csv \
+  --output generated/student_report.csv \
+  --mentor-output generated/mentor_report.csv \
+  --high-threshold 8 \
+  --low-threshold 7 \
+  --bonus 5 \
+  --mentor-map data/mentor.csv
+```
+
+- `--input`: Exported Qualtrics mentor CSV (usually the raw export; see `data/mentor_raw.csv`).
+- `--output`: Path to write the student-level expanded CSV with per-student weighted scores and final scores for Canvas.
+- `--mentor-output`: Optional path to write the team-level mentor report CSV (contains weighted team scores and metadata; defaults to `./generated/mentor_report.csv`).
+- `--high-threshold` / `--low-threshold`: Score thresholds used to classify `Bonus` and `Attention` actions (defaults: 8 / 7).
+- `--bonus`: Bonus percentage applied when a `Bonus` action is detected (default `5` → multiplies final score by 1.05).
+- `--mentor-map`: Optional CSV mapping with columns `group_name, mentor_name` to provide DB mentor names (will populate `Mentor_Name_DB`).
+
+The script generates a student-level report at `--output` for Canvas grade imports, and optionally a team-level summary at `--mentor-output`.
+
 ## Project layout
 
 - `main.py` — builder for `.qsf` templates (legacy).

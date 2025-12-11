@@ -1,0 +1,2 @@
+team,Organization,Avg_Score,Pct_Above_Threshold,Pct_Below_Threshold,Reviewer_Count,Action,Client_abcd,Client_asd
+A,abcd,7.37,0.0,50.0,2,Normal,"{""overall"": 6.9, ""candidates"": {""Hicks, Paul"": 5.0, ""Johnson, Brenda"": 10.0, ""Ward, Kayla"": 3.5}, ""feedback"": []}","{""overall"": 7.8, ""candidates"": {""Hicks, Paul"": 5.0, ""Johnson, Brenda"": 10.0, ""Ward, Kayla"": 3.0}, ""feedback"": [""asd""]}"
