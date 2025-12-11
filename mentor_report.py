@@ -410,6 +410,11 @@ def expand_to_student_level(team_df, student_output_path):
     for _, row in team_df.iterrows():
 
         team = row["team"]
+        mentor_name = row['Mentor']
+        mentor_name_db = row['Mentor_Name_DB']
+
+        if 'Mentor_R_' in mentor_name:
+            mentor_name = mentor_name_db
 
         # Team-level dimension histories (JSON arrays)
         comm_hist = json.loads(row["CommWithClient"])
@@ -511,6 +516,7 @@ def expand_to_student_level(team_df, student_output_path):
             rows.append({
                 "Team": team,
                 "Student_Name": student,
+                "Mentor": mentor_name,
 
                 # Team-level satisfaction / dimensions
                 "Team_Avg_Score": round(team_avg_score, 3) if team_avg_score is not None else None,
