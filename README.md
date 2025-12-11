@@ -103,6 +103,7 @@ python3 mentor_report.py \
 - `--high-threshold` / `--low-threshold`: Score thresholds used to classify `Bonus` and `Attention` actions (defaults: 8 / 7).
 - `--bonus`: Bonus percentage applied when a `Bonus` action is detected (default `5` → multiplies final score by 1.05).
 - `--mentor-map`: Optional CSV mapping with columns `group_name, mentor_name` to provide DB mentor names (will populate `Mentor_Name_DB`).
+- **Note:** The mentor map was introduced because the original survey lacked a default value for the mentor name text field, resulting in empty mentor names in submissions.
 
 The script generates a student-level report at `--output` for Canvas grade imports, and optionally a team-level summary at `--mentor-output`.
 
